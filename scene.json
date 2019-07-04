@@ -1,0 +1,111 @@
+{
+   "CONTROLS" : [
+       {
+           "DEFAULT" : 0,
+           "DESCRIPTION" : "Smoothly switch between 3D and 2D perspective using Equirectangular projection.",
+           "IS_META" : false,
+           "MAX" : 0,
+           "MIN" : 1,
+           "NAME" : "min_perspective",
+           "TYPE" : "slider smooth",
+           "UI_GROUP" : "camera"
+       },
+       {
+           "DEFAULT" : 1,
+           "DESCRIPTION" : "Smoothly switch between 3D and 2D perspective using Equirectangular projection.",
+           "IS_META" : false,
+           "MAX" : 0,
+           "MIN" : 1,
+           "NAME" : "max_perspective",
+           "TYPE" : "slider smooth",
+           "UI_GROUP" : "camera"
+       },
+       {
+           "DEFAULT" : 0,
+           "DESCRIPTION" : "Just move the X-axis to spin about your main axis, or move the Y-axis to tilt forwards or backwards.",
+           "IS_META" : false,
+           "MAX" : 1,
+           "MIN" : -1,
+           "NAME" : "lookXY",
+           "TYPE" : "xy smooth",
+           "UI_GROUP" : "camera"
+       },
+       {
+           "DEFAULT" : 0,
+           "DESCRIPTION" : "",
+           "IS_META" : false,
+           "MAX" : 2,
+           "MIN" : -2,
+           "NAME" : "positionXY",
+           "TYPE" : "xy smooth",
+           "UI_GROUP" : "camera"
+       },
+       {
+           "DEFAULT" : 0.2,
+           "DESCRIPTION" : "",
+           "IS_META" : false,
+           "MAX" : 0.5,
+           "MIN" : -0.5,
+           "NAME" : "zoom",
+           "TYPE" : "slider smooth",
+           "UI_GROUP" : "texture"
+       },
+       {
+           "DEFAULT" : 0,
+           "DESCRIPTION" : "ON: time variable is influenced by the audio bass. OFF: constant rate.",
+           "IS_META" : false,
+           "MAX" : 1,
+           "MIN" : 0,
+           "NAME" : "reactive_time",
+           "TYPE" : "toggle",
+           "UI_GROUP" : "reactivity"
+       },
+       {
+           "DEFAULT" : 0.25,
+           "DESCRIPTION" : "How fast the time variable grows, whether it is reactive time or constant time.",
+           "IS_META" : false,
+           "MAX" : 2,
+           "MIN" : -2,
+           "NAME" : "rate_in",
+           "TYPE" : "knob",
+           "UI_GROUP" : "reactivity"
+       },
+       {
+           "DEFAULT" : 1,
+           "DESCRIPTION" : "",
+           "IS_META" : false,
+           "MAX" : 1,
+           "MIN" : 0,
+           "NAME" : "perspective",
+           "TYPE" : "toggle",
+           "UI_GROUP" : "reactivity"
+       },
+       {
+           "DEFAULT" : 0,
+           "DESCRIPTION" : "",
+           "IS_META" : false,
+           "MAX" : 1,
+           "MIN" : 0,
+           "NAME" : "position",
+           "TYPE" : "toggle",
+           "UI_GROUP" : "reactivity"
+       },
+       {
+           "DEFAULT": 0,
+           "DESCRIPTION": "",
+           "IS_META": false,
+           "MAX": 0.5,
+           "MIN": 0,
+           "NAME": "position_momentum",
+           "TYPE": "xy smooth",
+           "UI_GROUP": "reactivity"
+       }
+   ],
+   "CREDIT" : "Shady Headstash",
+   "DESCRIPTION" : "instead of using distance to closest point, it uses distance to hit(maybe), so i can lower the step count\nvoxel version(can't see as far) [url]https://www.shadertoy.com/view/MdlcWX[/url]",
+   "HEIGHT" : 1080,
+   "IMAGES" : [],
+   "IMAGE_PATH" : "equirectangular.png",
+   "TITLE" : "Equirectangular 2",
+   "WIDTH" : 1920
+}
