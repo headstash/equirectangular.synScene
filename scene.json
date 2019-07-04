@@ -102,7 +102,7 @@
        }
    ],
    "CREDIT" : "Shady Headstash",
-   "DESCRIPTION" : "instead of using distance to closest point, it uses distance to hit(maybe), so i can lower the step count\nvoxel version(can't see as far) [url]https://www.shadertoy.com/view/MdlcWX[/url]",
+   "DESCRIPTION" : "Smoothly switch between 3D and 2D perspective using Equirectangular projection.",
    "HEIGHT" : 1080,
    "IMAGES" : [],
    "IMAGE_PATH" : "equirectangular.png",
