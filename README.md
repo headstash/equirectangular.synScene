@@ -1,6 +1,6 @@
 ## Equirectangular
 
-Equirectangular projection shader for Synesthesia.
+Equirectangular projection shader for Synesthesia. Smoothly switch between 3D and 2D perspective using Equirectangular projection.
 
 ## To do
 *  **Reactivity is unintuitive** - Under reactivity, the perspective and position toggles enable/disable automating either the perspective or the position. The reactive_time toggle enables/disables beat reactivity. If the toggle is off and perspective or position is on, then they will use the rate_in. The position_momentum is kinda weird right now.
