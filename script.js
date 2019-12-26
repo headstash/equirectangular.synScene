@@ -12,13 +12,13 @@ var timevar = new Timer();
 
 function update(dt) {
     var rate_in = inputs.rate_in;
-    if (inputs.zoom >= 1 || inputs.zoom <= -1) {
+    /*if (inputs.zoom >= 1 || inputs.zoom <= -1) {
         rate_in += (inputs.zoom * 0.1);
-    }
+    }*/
     time_bass += 0.05*(inputs.syn_BassLevel + inputs.syn_BassLevel*inputs.syn_BassLevel)*rate_in;
     time_highs += 0.1*(inputs.syn_HighHits + inputs.syn_HighHits*inputs.syn_HighHits)*rate_in;
 
-    bassTimevar.updateTime(0.1, (inputs.syn_BassLevel*2.0+inputs.syn_BassPresence+inputs.syn_BassHits*2.0)*rate_in, dt);
+    bassTimevar.updateTime(0.1, inputs.reactive_time ? (inputs.syn_BassLevel*2.0+inputs.syn_BassPresence+inputs.syn_BassHits*2.0)*rate_in : rate_in, dt);
     timevar.updateTime(0.4, rate_in, dt);
 
     uniforms.time_bass = time_bass;
