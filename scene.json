@@ -6,7 +6,7 @@
          "IS_META" : false,
          "MAX" : 0,
          "MIN" : 1,
-         "NAME" : "perspective",
+         "NAME" : "min_perspective",
          "PARAMS" : 0.00999999977648258,
          "TYPE" : "slider smooth",
          "UI_GROUP" : "camera"

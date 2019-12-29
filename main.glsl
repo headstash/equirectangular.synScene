@@ -12,8 +12,6 @@ vec4 renderMainImage() {
     v.y -= 0.5;
 
     vec2 uvc = _uvc;
-    uvc.x += positionXY.x*2.0;
-    uvc.y += positionXY.y*2.0;
 
     float position_time = bass_time*4.0;
     float perspective_time = bass_time*4.0;
@@ -27,13 +25,13 @@ vec4 renderMainImage() {
     vec3 sp = vec3( sin(ph) * cos(th), sin(th), cos(ph) * cos(th) );
     vec3 pos = vec3( pi, rotate * PI, 0);
     pos *= texture_zoom;
-    sp = mix(sp, normalize(vec3(uvc, 1.0)), (perspective == 1 ? (perspective * sin(perspective_time)) * max_perspective : perspective));
+    sp = mix(sp, normalize(vec3(uvc, 1.0)), (perspective == 1 ? (min_perspective * sin(perspective_time)) * max_perspective : min_perspective));
 
-    sp.yz = _rotate(sp.yz, lookXY.y*PI);
+    sp.yz = _rotate(sp.yz, 0.5+lookXY.y*PI);
     sp.xy = _rotate(sp.xy, lookXY.x*PI);
 
     if (_exists(syn_UserImage)) {
-        fragColor = texture(syn_UserImage, mod(vec2(dot(pos, sp.zxy), dot(pos.yzx, sp.zxy)), 1.0));
+        fragColor = texture(syn_UserImage, mod(vec2(dot(pos, sp.zxy), dot(pos.yzx, sp.zxy))+positionXY.xy, 1.0));
     }
     return fragColor;
 }
