@@ -8,12 +8,12 @@ vec4 renderMainImage() {
 	vec2 fragCoord = _xy;
 
     vec2 uv = fragCoord.xy / RENDERSIZE.xy;
-    vec2 v = (_xy.xy / RENDERSIZE.xy) + RENDERSIZE.y;
+    vec2 v = zoom*(_xy.xy / RENDERSIZE.xy) + RENDERSIZE.y;
     v.y -= 0.5;
 
     vec2 uvc = _uvc;
-    uvc.x += positionXY.x;
-    uvc.y += positionXY.y;
+    uvc.x += positionXY.x*2.0;
+    uvc.y += positionXY.y*2.0;
 
     float position_time = bass_time*4.0;
     float perspective_time = bass_time*4.0;
@@ -26,8 +26,8 @@ vec4 renderMainImage() {
         ph = v.x * twpi;
     vec3 sp = vec3( sin(ph) * cos(th), sin(th), cos(ph) * cos(th) );
     vec3 pos = vec3( pi, rotate * PI, 0);
-    pos *= zoom;
-    sp = mix(sp, normalize(vec3(uvc, 1.0)), (perspective == 1 ? (min_perspective * sin(perspective_time)) * max_perspective : min_perspective));
+    pos *= texture_zoom;
+    sp = mix(sp, normalize(vec3(uvc, 1.0)), (perspective == 1 ? (perspective * sin(perspective_time)) * max_perspective : perspective));
 
     sp.yz = _rotate(sp.yz, lookXY.y*PI);
     sp.xy = _rotate(sp.xy, lookXY.x*PI);
