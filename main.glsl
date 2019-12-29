@@ -33,7 +33,7 @@ vec4 renderMainImage() {
     sp.xy = _rotate(sp.xy, lookXY.x*PI);
 
     if (_exists(syn_UserImage)) {
-        fragColor = texture(syn_UserImage, (vec2(dot(pos, sp.zxy), dot(pos.yzx, sp.zxy))));
+        fragColor = texture(syn_UserImage, mod(vec2(dot(pos, sp.zxy), dot(pos.yzx, sp.zxy)), 1.0));
     }
     return fragColor;
 }
