@@ -23,7 +23,7 @@
          "UI_GROUP" : "camera"
       },
        {
-           "DEFAULT" : 0.5,
+           "DEFAULT" : 1.0,
            "DESCRIPTION" : "",
            "IS_META" : false,
            "MAX" : 1,
@@ -34,7 +34,7 @@
            "UI_GROUP" : "camera"
        },
       {
-         "DEFAULT" : 1,
+         "DEFAULT" : 0,
          "DESCRIPTION" : "",
          "IS_META" : false,
          "MAX" : 1,
@@ -45,7 +45,7 @@
          "UI_GROUP" : "texture"
       },
       {
-         "DEFAULT" : 0.200000002980232,
+         "DEFAULT" : 1.0,
          "DESCRIPTION" : "",
          "IS_META" : false,
          "MAX" : 1,
@@ -133,6 +133,12 @@
    "DESCRIPTION" : "Smoothly switch between 3D and 2D perspective using Equirectangular projection.",
    "HEIGHT" : 1080,
    "IMAGE_PATH" : "equirectangular.png",
+   "IMAGES": [
+       {
+           "NAME" : "image1",
+           "PATH" : "images/1.jpg"
+       }
+   ],
    "TITLE" : "Equirectangular",
    "WIDTH" : 1920
 }

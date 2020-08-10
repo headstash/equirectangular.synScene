@@ -3,6 +3,13 @@
 #define 	twpi  	6.283185307179586  	// two pi, 2*pi
 #define 	pi   	3.141592653589793 	// pi
 
+
+vec4 renderPattern(vec4 fragColor, vec2 fragCoord) {
+    vec2 uv = floor(10.0 * fragCoord.xy * vec2(RENDERSIZE.x / RENDERSIZE.y, 1) / RENDERSIZE.xy);
+    fragColor = vec4(vec3(mod(uv.x + uv.y, 2.)), 1);
+    return fragColor;
+}
+
 vec4 renderMainImage() {
 	vec4 fragColor = vec4(0.0);
 	vec2 fragCoord = _xy;
@@ -31,12 +38,9 @@ vec4 renderMainImage() {
     sp.yz = _rotate(sp.yz, 0.5+lookXY.y*PI);
     sp.xy = _rotate(sp.xy, lookXY.x*PI);
 
-    if (_exists(syn_UserImage)) {
-        fragColor = texture(syn_UserImage, mod(vec2(dot(pos, sp.zxy), dot(pos.yzx, sp.zxy))+positionXY.xy, 1.0));
-    }
+    fragColor = texture(_exists(syn_UserImage) ? syn_UserImage : image1, mod(vec2(dot(pos, sp.zxy), dot(pos.yzx, sp.zxy))+positionXY.xy, 1.0));
     return fragColor;
 }
-
 vec4 renderMain(){
 	if(PASSINDEX == 0){
 		return renderMainImage();
