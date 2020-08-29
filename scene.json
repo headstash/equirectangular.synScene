@@ -6,7 +6,7 @@
          "IS_META" : false,
          "MAX" : 0,
          "MIN" : 1,
-         "NAME" : "min_perspective",
+         "NAME" : "perspective",
          "PARAMS" : 0.00999999977648258,
          "TYPE" : "slider smooth",
          "UI_GROUP" : "camera"
@@ -22,49 +22,27 @@
          "TYPE" : "xy smooth",
          "UI_GROUP" : "camera"
       },
-       {
-           "DEFAULT" : 1.0,
-           "DESCRIPTION" : "",
-           "IS_META" : false,
-           "MAX" : 1,
-           "MIN" : -1,
-           "NAME" : "zoom",
-           "PARAMS" : 0.00999999977648258,
-           "TYPE" : "slider smooth",
-           "UI_GROUP" : "camera"
-       },
-      {
-         "DEFAULT" : 0,
-         "DESCRIPTION" : "",
-         "IS_META" : false,
-         "MAX" : 1,
-         "MIN" : -1,
-         "NAME" : "rotate",
-         "PARAMS" : 0.00999999977648258,
-         "TYPE" : "slider smooth",
-         "UI_GROUP" : "texture"
-      },
       {
          "DEFAULT" : 1.0,
          "DESCRIPTION" : "",
          "IS_META" : false,
-         "MAX" : 1,
-         "MIN" : -1,
-         "NAME" : "texture_zoom",
+         "MAX" : 1.0,
+         "MIN" : 0.1,
+         "NAME" : "zoom",
          "PARAMS" : 0.00999999977648258,
          "TYPE" : "slider smooth",
-         "UI_GROUP" : "texture"
+         "UI_GROUP" : "media"
       },
       {
          "DEFAULT" : 0,
          "DESCRIPTION" : "",
          "IS_META" : false,
-         "MAX" : 2,
-         "MIN" : -2,
+         "MAX" : 1.0,
+         "MIN" : -1.0,
          "NAME" : "positionXY",
          "PARAMS" : 0.00999999977648258,
          "TYPE" : "xy smooth",
-         "UI_GROUP" : "texture"
+         "UI_GROUP" : "media"
       },
       {
          "DEFAULT" : 0.25,
@@ -74,59 +52,18 @@
          "MIN" : -2,
          "NAME" : "rate_in",
          "TYPE" : "knob",
-         "UI_GROUP" : "reactivity"
-      },
-      {
-         "DEFAULT" : 0,
-         "DESCRIPTION" : "ON: time variable is influenced by the audio bass. OFF: constant rate.",
-         "IS_META" : false,
-         "MAX" : 1,
-         "MIN" : 0,
-         "NAME" : "reactive_time",
-         "TYPE" : "toggle",
-         "UI_GROUP" : "reactivity"
-      },
-      {
-         "DEFAULT" : 0,
-         "DESCRIPTION" : "",
-         "IS_META" : false,
-         "MAX" : 1,
-         "MIN" : 0,
-         "NAME" : "perspective",
-         "TYPE" : "toggle",
-         "UI_GROUP" : "reactivity"
-      },
-      {
-         "DEFAULT" : 0,
-         "DESCRIPTION" : "",
-         "IS_META" : false,
-         "MAX" : 1,
-         "MIN" : 0,
-         "NAME" : "position",
-         "TYPE" : "toggle",
-         "UI_GROUP" : "reactivity"
-      },
-      {
-         "DEFAULT" : 0,
-         "DESCRIPTION" : "",
-         "IS_META" : false,
-         "MAX" : 1,
-         "MIN" : 0,
-         "NAME" : "max_perspective",
-         "PARAMS" : 0.00999999977648258,
-         "TYPE" : "slider smooth",
-         "UI_GROUP" : "reactivity"
+         "UI_GROUP" : "position"
       },
       {
          "DEFAULT" : 0,
          "DESCRIPTION" : "",
          "IS_META" : false,
          "MAX" : 0.5,
-         "MIN" : 0,
+         "MIN" : -0.5,
          "NAME" : "position_momentum",
          "PARAMS" : 0.00999999977648258,
          "TYPE" : "xy smooth",
-         "UI_GROUP" : "reactivity"
+         "UI_GROUP" : "position"
       }
    ],
    "CREDIT" : "Shady Headstash",

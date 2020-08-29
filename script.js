@@ -18,7 +18,7 @@ function update(dt) {
     time_bass += 0.05*(inputs.syn_BassLevel + inputs.syn_BassLevel*inputs.syn_BassLevel)*rate_in;
     time_highs += 0.1*(inputs.syn_HighHits + inputs.syn_HighHits*inputs.syn_HighHits)*rate_in;
 
-    bassTimevar.updateTime(0.1, inputs.reactive_time ? (inputs.syn_Level*2.0+inputs.syn_Presence+inputs.syn_Hits*2.0)*rate_in : rate_in, dt);
+    bassTimevar.updateTime(0.1, inputs.syn_Level*2.0+inputs.syn_Presence+inputs.syn_Hits*2.0*rate_in, dt);
     timevar.updateTime(0.4, rate_in, dt);
 
     uniforms.time_bass = time_bass;
