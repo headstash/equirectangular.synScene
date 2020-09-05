@@ -1,70 +1,66 @@
 {
    "CONTROLS" : [
       {
-         "DEFAULT" : 0,
+         "DEFAULT" : 1,
          "DESCRIPTION" : "Smoothly switch between 3D and 2D perspective using Equirectangular projection.",
          "IS_META" : false,
-         "MAX" : 0,
-         "MIN" : 1,
-         "NAME" : "perspective",
-         "PARAMS" : 0.00999999977648258,
-         "TYPE" : "slider smooth",
-         "UI_GROUP" : "camera"
-      },
-      {
-         "DEFAULT" : 0,
-         "DESCRIPTION" : "Just move the X-axis to spin about your main axis, or move the Y-axis to tilt forwards or backwards.",
-         "IS_META" : false,
          "MAX" : 1,
-         "MIN" : -1,
-         "NAME" : "lookXY",
-         "PARAMS" : 0.00999999977648258,
-         "TYPE" : "xy smooth",
+         "MIN" : 0,
+         "NAME" : "perspective",
+         "TYPE" : "slider smooth",
          "UI_GROUP" : "camera"
       },
       {
          "DEFAULT" : 1.0,
-         "DESCRIPTION" : "",
+         "DESCRIPTION" : "Just move the X-axis to spin about your main axis, or move the Y-axis to tilt forwards or backwards.",
+         "IS_META" : false,
+         "MAX" : 2,
+         "MIN" : 0,
+         "NAME" : "look_xy",
+         "TYPE" : "xy smooth",
+         "UI_GROUP" : "camera"
+      },
+      {
+         "DEFAULT" : 0.5,
+         "DESCRIPTION" : "Zoom in and out of the input media.",
          "IS_META" : false,
          "MAX" : 1.0,
-         "MIN" : 0.1,
+         "MIN" : 0.0,
          "NAME" : "zoom",
-         "PARAMS" : 0.00999999977648258,
          "TYPE" : "slider smooth",
          "UI_GROUP" : "media"
       },
       {
          "DEFAULT" : 0,
-         "DESCRIPTION" : "",
+         "DESCRIPTION" : "Pan input media in any direction.",
          "IS_META" : false,
          "MAX" : 1.0,
          "MIN" : -1.0,
-         "NAME" : "positionXY",
-         "PARAMS" : 0.00999999977648258,
+         "NAME" : "position",
          "TYPE" : "xy smooth",
          "UI_GROUP" : "media"
       },
       {
-         "DEFAULT" : 0.25,
-         "DESCRIPTION" : "How fast the time variable grows, whether it is reactive time or constant time.",
-         "IS_META" : false,
-         "MAX" : 2,
-         "MIN" : -2,
-         "NAME" : "rate_in",
-         "TYPE" : "knob",
-         "UI_GROUP" : "position"
-      },
-      {
          "DEFAULT" : 0,
-         "DESCRIPTION" : "",
+         "DESCRIPTION" : "Automatically pan input media in any direction.",
          "IS_META" : false,
          "MAX" : 0.5,
          "MIN" : -0.5,
-         "NAME" : "position_momentum",
-         "PARAMS" : 0.00999999977648258,
-         "TYPE" : "xy smooth",
-         "UI_GROUP" : "position"
-      }
+         "NAME" : "velocity",
+         "PARAMS" : 0.0025,
+         "TYPE" : "xy traveler",
+         "UI_GROUP" : "media"
+      },
+       {
+           "DEFAULT" : 1.0,
+           "DESCRIPTION" : "Mirror input texture when tiling.",
+           "IS_META" : false,
+           "MAX" : 1.0,
+           "MIN" : 0.0,
+           "NAME" : "mirror",
+           "TYPE" : "toggle",
+           "UI_GROUP" : "media"
+       }
    ],
    "CREDIT" : "Shady Headstash",
    "DESCRIPTION" : "Smoothly switch between 3D and 2D perspective using Equirectangular projection.",
